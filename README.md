@@ -88,7 +88,9 @@ Note that the return reference.table includs 2 columns, for the reason that down
 
 # R Note
 
-I write an article in chinese for more detail about how I implement this crawler.   
+I write an article in Chinese for more detail about how I implement this crawler.   
+ 
+(Sorry ,there is no English version)    
 
 http://rpubs.com/skydome20/R-Note13-Web-Crawler-on-CIA-CREST-by-xml2     
 
