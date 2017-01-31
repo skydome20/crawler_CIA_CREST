@@ -12,9 +12,9 @@ basic.info.query.CIA_CREST <- function(query){
   tryCatch({
     # combine CIA url and your query
     init.url = paste('https://www.cia.gov/library/readingroom/search/site/', query, sep='')
-    
+
     # read the html page
-    html.page = read_html(init.url)
+    html.page = read_html(url(init.url))
     
     # use 'xpath' to get the number of search items
     xpath = "//*[@class='current-search-item current-search-item-text current-search-item-results']" 
@@ -60,7 +60,7 @@ parsing.pages.CIA_CREST <- function(query, pages){
     parse.table = data.frame()  # (title, url, page, corres.page) table
     for(page.url in search.pages){
       # read the html page
-      html.page = read_html(page.url)
+      html.page = read_html(url(page.url))
       
       # use 'xpath' to get (title, url) table for each page
       xpath = "//*[@class='search-results apachesolr_search-results']/li/h3/a"
@@ -103,7 +103,7 @@ download.doc.CIA_CREST <- function(parse.table){
     reference.table = data.frame()
     for(ind in 1:length(parse.table$`download.url`)){
       # read the html page
-      html.page = read_html(parse.table$`download.url`[ind])
+      html.page = read_html(url(parse.table$`download.url`[ind]))
       
       # use 'xpath' to get  for each page
       xpath = "//*[@class='odd']/td/span/a"
