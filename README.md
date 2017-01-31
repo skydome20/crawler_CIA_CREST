@@ -2,7 +2,7 @@
    
 In 2017/01/18, Central Intelligence Agency (CIA) released their CIA Records Search Tool(**CREST**) database online, including 930,000 declassified documents.   
    
-Briefly interesting, I try to write a web crawler for the public CIA CREST website(https://www.cia.gov/library/readingroom/collection/crest-25-year-program-archive), making it convenient to fast browse information of your query and automatically download documents in your own equipment.      
+Being interested, I try to write a web crawler for the public CIA CREST website ( https://www.cia.gov/library/readingroom/collection/crest-25-year-program-archive ), making it convenient to fast browse information of your query and automatically download documents in your own equipment.      
    
 The search query is for CIA Freedom of Information Act (FOIA) Electronic Reading Room (ERR), and the crawler is coded by R.   
 
@@ -18,7 +18,7 @@ This is a R script which has 3 functions:
 
 # main.R    
 
-I provided some examples in this script.   
+I provided some examples in this script, now just showing one example.   
 
 
 ##1. basic.info.query.CIA_CREST(query)   
@@ -72,7 +72,7 @@ This parse.table should be supplied to `download.doc.CIA_CREST()`, the function 
 
 ##3. download.doc.CIA_CREST(parse.table)   
 
-That is, we download documents(.pdf) about "secret letter" in the top 10 pages.
+That is, we want to download documents(.pdf) about "secret letter" in the top 10 pages.
 
 ```
 reference.table = download.doc.CIA_CREST(parse.table)
