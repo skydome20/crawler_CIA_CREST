@@ -21,7 +21,7 @@ This is a R script which has 3 functions:
 I provided some examples in this script.   
 
 
-###1.basic.info.query.CIA_CREST(query)   
+##1. basic.info.query.CIA_CREST(query)   
 
 For example, if you are interesting in "secret lettet" and want to search some documents:   
 
@@ -44,7 +44,7 @@ and you will get the response of **388350** search items and the range of result
 (Note that **0 page** equals to the first page on the web)   
 
 
-###2.parsing.pages.CIA_CREST(query, pages)   
+##2. parsing.pages.CIA_CREST(query, pages)   
     
 The next step is to decide pages where you want to search.   
 
@@ -70,7 +70,7 @@ The return parse.table includes 4 columns:
 This parse.table should be supplied to `download.doc.CIA_CREST()`, the function which will automatically download all documents in parse.table to the relative folder.
 
 
-###3.download.doc.CIA_CREST(parse.table)   
+##3. download.doc.CIA_CREST(parse.table)   
 
 That is, we download documents(.pdf) about "secret letter" in the top 10 pages.
 
@@ -86,7 +86,11 @@ Note that the return reference.table includs 2 columns, for the reason that down
 
 
 
+# R Note
 
+I write an article in chinese for more detail about how I implement this crawler.   
+
+http://rpubs.com/skydome20/R-Note13-Web-Crawler-on-CIA-CREST-by-xml2     
 
 
 
