@@ -23,13 +23,12 @@ I provided some examples in this scripts.
 For example, I want to search documents about "secret letter" :   
 
 ```
-#=== 1. Give a query to get basic information ===#
 basic.info.query.CIA_CREST(query = "secret letter") 
 ```   
 
 and you will get the response of 388350 search items and the range of result-pages is 0~19417 pages.   
 
-(Note that 0 means the first page on the web)
+(Note that 0 page equals to the first page on the web)
 ```
 # Response 
 The search query is for CIA Freedom of Information Act (FOIA) Electronic Reading Room (ERR)
@@ -40,17 +39,46 @@ Search found 388350 items
 The results contain 0 ~ 19417 pages
 ```
 
+The next step is to decide pages where you want to search.   
 
-
-#=== 2. Parse results according to given query and pages ===#
-your.query = 'secret letter'
-page.nums = c(0,2,4)    
-# return a parse.table
-parse.table = parsing.pages.CIA_CREST(your.query, page.nums)
-
-#=== 3. Auto-download files according to the parse.table ===#
-# download files according to the parse.table from parsing.pages.CIA_CREST()
-# and return a reference.table
-reference.table = download.doc.CIA_CREST(parse.table)
+For example, you want to check the titles of documenets in the top 10 pages: 
 
 ```
+your.query = 'secret letter'
+page.nums = c(0:9)   # the top 10 pages
+
+parse.table = parsing.pages.CIA_CREST(your.query, page.nums)
+```
+
+The return parse.table includes four columns:
+
+1. `title` : titles of documents.
+
+2. `download.url` : urls where to download documents.
+
+3. `page` : the page where this document is in.
+
+4. `correspond.page` : the page url where this documents is in.
+
+This parse.table should be supplied to `download.doc.CIA_CREST()`, the function which will automatically download all documents in parse.table to the relative folder.
+
+That is, we download documents(.pdf) about "secret letter" in the top 10 pages.
+
+```
+reference.table = download.doc.CIA_CREST(parse.table)
+```
+
+Note that the return reference.table includs two columns, for the reason that downloaded documents have their own file name by CIA encoded style:
+
+1. `title` : title of documents 
+
+2. `pdf.name` : file name of downloaded documents(.pdf)
+
+
+
+
+
+
+
+
+
