@@ -20,15 +20,15 @@ This is a R script which has 3 functions:
 
 I provided some examples in this script.   
 
+
+###1.   
+
 For example, if you are interesting in "secret lettet" and want to search some documents:   
 
 ```
 basic.info.query.CIA_CREST(query = "secret letter") 
 ```   
 
-and you will get the response of **388350** search items and the range of result pages is **0~19417** pages.   
-
-(Note that 0 page equals to the first page on the web)
 ```
 # Response 
 The search query is for CIA Freedom of Information Act (FOIA) Electronic Reading Room (ERR)
@@ -39,6 +39,13 @@ Search found 388350 items
 The results contain 0 ~ 19417 pages
 ```
 
+and you will get the response of **388350** search items and the range of result pages is **0~19417** pages.     
+
+(Note that 0 page equals to the first page on the web)   
+
+
+###2.   
+    
 The next step is to decide pages where you want to search.   
 
 For example, you want to check documenets about "secret letter" in the top 10 pages: 
@@ -61,6 +68,9 @@ The return parse.table includes 4 columns:
 4. `correspond.page` : the page url where this documents is in.
 
 This parse.table should be supplied to `download.doc.CIA_CREST()`, the function which will automatically download all documents in parse.table to the relative folder.
+
+
+###3.   
 
 That is, we download documents(.pdf) about "secret letter" in the top 10 pages.
 
