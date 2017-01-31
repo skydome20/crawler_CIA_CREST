@@ -12,21 +12,21 @@ This is a R script which has 3 functions:
 
 1. `basic.info.query.CIA_CREST(query)` : get the basic information by a given query.   
 
-2. `parsing.pages.CIA_CREST(query, pages)` : return a parse.table according to the given query and range of pages where you want to search, will be provied to the next function.   
+2. `parsing.pages.CIA_CREST(query, pages)` : return a parse.table according to the given query and range of pages where you want to search, should be provied to the next function.   
 
 3. `download.doc.CIA_CREST(parse.table)` : automatically download documents in the parse.table, and return a reference.table which helps to match titles of documents with downloaded documents(.pdf).   
 
 # main.R    
 
-I provided some examples in this scripts.   
+I provided some examples in this script.   
 
-For example, I want to search documents about "secret letter" :   
+For example, if you are interesting in "secret lettet" and want to search some documents:   
 
 ```
 basic.info.query.CIA_CREST(query = "secret letter") 
 ```   
 
-and you will get the response of 388350 search items and the range of result-pages is 0~19417 pages.   
+and you will get the response of **388350** search items and the range of result pages is **0~19417** pages.   
 
 (Note that 0 page equals to the first page on the web)
 ```
@@ -41,7 +41,7 @@ The results contain 0 ~ 19417 pages
 
 The next step is to decide pages where you want to search.   
 
-For example, you want to check the titles of documenets in the top 10 pages: 
+For example, you want to check documenets about "secret letter" in the top 10 pages: 
 
 ```
 your.query = 'secret letter'
@@ -50,7 +50,7 @@ page.nums = c(0:9)   # the top 10 pages
 parse.table = parsing.pages.CIA_CREST(your.query, page.nums)
 ```
 
-The return parse.table includes four columns:
+The return parse.table includes 4 columns:
 
 1. `title` : titles of documents.
 
@@ -68,7 +68,7 @@ That is, we download documents(.pdf) about "secret letter" in the top 10 pages.
 reference.table = download.doc.CIA_CREST(parse.table)
 ```
 
-Note that the return reference.table includs two columns, for the reason that downloaded documents have their own file name by CIA encoded style:
+Note that the return reference.table includs 2 columns, for the reason that downloaded documents have their own file name by CIA encoded style:
 
 1. `title` : title of documents 
 
