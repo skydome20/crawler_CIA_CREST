@@ -75,7 +75,21 @@ This parse.table should be supplied to `download.doc.CIA_CREST()`, the function 
 That is, we want to download documents(.pdf) about "secret letter" in the top 10 pages.
 
 ```
+your.query = 'secret letter'
+page.nums = c(0:9)   # the top 10 pages
+
+parse.table = parsing.pages.CIA_CREST(your.query, page.nums)
 reference.table = download.doc.CIA_CREST(parse.table)
+```
+
+Or we want to download the top 10 documents(.pdf) about "UFO" in the first page.
+
+```
+your.query = 'UFO'
+page.nums = c(0)   # the first pages
+
+parse.table = parsing.pages.CIA_CREST(your.query, page.nums)
+reference.table = download.doc.CIA_CREST(parse.table[1:10,]) # only the top 10 documents  
 ```
 
 Note that the return reference.table includs 2 columns, for the reason that downloaded documents have their own file name by CIA encoded style:
