@@ -57,7 +57,7 @@ reference.table = download.doc.CIA_CREST(parse.table)
 
 ##################################################################################
 
-# Download CIA files of 'UFO' in 0 pages 
+# Download the top 10 CIA files of 'UFO' in 0 pages 
 # (note that 0 is the 1st page on the web)
 
 #=== 1. Give a query to get basic information ===#
@@ -69,4 +69,4 @@ page.nums = c(0)    #  (note that 0 is the 1st page on the web)
 parse.table = parsing.pages.CIA_CREST(your.query, page.nums)
 
 #=== 3. Auto-download files according to the parse.table ===#
-reference.table = download.doc.CIA_CREST(parse.table)
+reference.table = download.doc.CIA_CREST(parse.table[1:10, ])

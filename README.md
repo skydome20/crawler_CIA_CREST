@@ -12,9 +12,9 @@ This is a R script which has 3 functions:
 
 1. `basic.info.query.CIA_CREST(query)` : get the basic information by a given query.   
 
-2. `parsing.pages.CIA_CREST(query, pages)` : return a parse.table according to the given query and range of pages where you want to search, should be provied to the next function.   
+2. `parsing.pages.CIA_CREST(query, pages)` : return a `parse.table` according to the given query and range of pages where you want to search, should be provied to the next function.   
 
-3. `download.doc.CIA_CREST(parse.table)` : automatically download documents in the parse.table, and return a reference.table which helps to match titles of documents with downloaded documents(.pdf).   
+3. `download.doc.CIA_CREST(parse.table)` : automatically download documents in the `parse.table`, and return a `reference.table` which helps to match titles of documents with downloaded documents(.pdf).   
 
 # main.R    
 
@@ -57,7 +57,7 @@ page.nums = c(0:9)   # the top 10 pages
 parse.table = parsing.pages.CIA_CREST(your.query, page.nums)
 ```
 
-The return parse.table includes 4 columns:
+The return `parse.table` includes 4 columns:
 
 1. `title` : titles of documents.
 
@@ -67,7 +67,7 @@ The return parse.table includes 4 columns:
 
 4. `correspond.page` : the page url where this documents is in.
 
-This parse.table should be supplied to `download.doc.CIA_CREST()`, the function which will automatically download all documents in parse.table to the relative folder.
+This `parse.table` should be supplied to `download.doc.CIA_CREST()`, the function which will automatically download all documents in `parse.table` to the relative folder.
 
 
 ##3. download.doc.CIA_CREST(parse.table)   
@@ -92,7 +92,7 @@ parse.table = parsing.pages.CIA_CREST(your.query, page.nums)
 reference.table = download.doc.CIA_CREST(parse.table[1:10,]) # only the top 10 documents  
 ```
 
-Note that the return reference.table includs 2 columns, for the reason that downloaded documents have their own file name by CIA encoded style:
+Note that the return `reference.table` includs 2 columns, for the reason that downloaded documents have their own file name by CIA encoded style:
 
 1. `title` : title of documents 
 
