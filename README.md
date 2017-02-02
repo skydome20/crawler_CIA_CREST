@@ -103,7 +103,7 @@ Note that the return `reference.table` includs 2 columns,
 
 2. `pdf.name` : file name of downloaded documents(.pdf)
 
-for the reason that downloaded documents have their own file name by CIA encoded style:
+for the reason that downloaded documents have their own file name by CIA encoded style; therefore, it's necessary to have a `reference.table` for mathcing **titles** to **documents**.
 
 <img src="img/1.png" />    
 
