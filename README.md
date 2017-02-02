@@ -107,7 +107,7 @@ for the reason that downloaded documents have their own file name by CIA encoded
 
 I write an article in Chinese for more detail about how I implement this crawler.   
  
-(Sorry ,there is no English version)    
+(Sorry, there is no English version)    
 
 http://rpubs.com/skydome20/R-Note13-Web-Crawler-on-CIA-CREST-by-xml2     
 
