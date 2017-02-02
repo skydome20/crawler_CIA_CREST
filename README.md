@@ -25,7 +25,7 @@ I provided some examples in this script, now just showing one example.
 
 For example, if you are interesting in "secret lettet" and want to search some documents:   
 
-```
+```r
 basic.info.query.CIA_CREST(query = "secret letter") 
 ```   
 
@@ -50,7 +50,7 @@ The next step is to decide pages where you want to search.
 
 For example, you want to check documenets about "secret letter" in the top 10 pages: 
 
-```
+```r
 your.query = 'secret letter'
 page.nums = c(0:9)   # the top 10 pages
 
@@ -75,7 +75,7 @@ This `parse.table` should be supplied to `download.doc.CIA_CREST()`, the functio
 
 That is, we want to download documents(.pdf) about "secret letter" in the top 10 pages.
 
-```
+```r
 your.query = 'secret letter'
 page.nums = c(0:9)   # the top 10 pages
 
@@ -87,7 +87,7 @@ reference.table = download.doc.CIA_CREST(parse.table)
 
 Or we want to download the top 10 documents(.pdf) about "UFO" in the first page.
 
-```R
+```r
 your.query = 'UFO'
 page.nums = c(0)   # the first pages
 
