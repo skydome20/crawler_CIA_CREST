@@ -92,12 +92,15 @@ parse.table = parsing.pages.CIA_CREST(your.query, page.nums)
 reference.table = download.doc.CIA_CREST(parse.table[1:10,]) # only the top 10 documents  
 ```
 
-Note that the return `reference.table` includs 2 columns, for the reason that downloaded documents have their own file name by CIA encoded style:
+Note that the return `reference.table` includs 2 columns, 
 
 1. `title` : title of documents 
 
 2. `pdf.name` : file name of downloaded documents(.pdf)
 
+for the reason that downloaded documents have their own file name by CIA encoded style:
+
+<img src="img/1.png" />   
 
 
 # R Note
