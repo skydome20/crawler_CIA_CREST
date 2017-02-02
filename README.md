@@ -100,10 +100,10 @@ Note that the return `reference.table` includs 2 columns,
 
 for the reason that downloaded documents have their own file name by CIA encoded style:
 
-<img src="img/1.png" />   
+<img src="img/1.png" />    
 
 
-# R Note
+# R Note for more detail
 
 I write an article in Chinese for more detail about how I implement this crawler.   
  
