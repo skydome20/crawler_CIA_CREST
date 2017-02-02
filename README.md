@@ -88,7 +88,7 @@ reference.table = download.doc.CIA_CREST(parse.table)
 Or we want to download the top 10 documents(.pdf) about "UFO" in the first page.
 
 ```r
-your.query = 'UFO'
+your.query <- 'UFO'
 page.nums = c(0)   # the first pages
 
 parse.table = parsing.pages.CIA_CREST(query = your.query, 
