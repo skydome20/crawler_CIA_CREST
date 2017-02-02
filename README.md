@@ -54,7 +54,8 @@ For example, you want to check documenets about "secret letter" in the top 10 pa
 your.query = 'secret letter'
 page.nums = c(0:9)   # the top 10 pages
 
-parse.table = parsing.pages.CIA_CREST(your.query, page.nums)
+parse.table = parsing.pages.CIA_CREST(your.query, 
+									  page.nums)
 ```
 
 The return `parse.table` includes 4 columns:
@@ -78,7 +79,9 @@ That is, we want to download documents(.pdf) about "secret letter" in the top 10
 your.query = 'secret letter'
 page.nums = c(0:9)   # the top 10 pages
 
-parse.table = parsing.pages.CIA_CREST(your.query, page.nums)
+parse.table = parsing.pages.CIA_CREST(your.query, 
+                                      page.nums)
+									  
 reference.table = download.doc.CIA_CREST(parse.table)
 ```
 
@@ -88,7 +91,9 @@ Or we want to download the top 10 documents(.pdf) about "UFO" in the first page.
 your.query = 'UFO'
 page.nums = c(0)   # the first pages
 
-parse.table = parsing.pages.CIA_CREST(your.query, page.nums)
+parse.table = parsing.pages.CIA_CREST(your.query, 
+                                      page.nums)
+									  
 reference.table = download.doc.CIA_CREST(parse.table[1:10,]) # only the top 10 documents  
 ```
 
