@@ -14,7 +14,7 @@ This is a R script which has 3 functions:
 
 2. `parsing.pages.CIA_CREST(query, pages)` : return a `parse.table` according to the given query and range of pages where you want to search, should be provied to the next function.   
 
-3. `download.doc.CIA_CREST(parse.table)` : automatically download documents in the `parse.table`, and return a `reference.table` which helps to match titles of documents with downloaded documents(.pdf).   
+3. `download.doc.CIA_CREST(parse.table)` : automatically download documents based on the `parse.table`, and return a `reference.table` which helps to match titles of documents with downloaded documents(.pdf).   
 
 # main.R    
 
@@ -59,6 +59,8 @@ parse.table = parsing.pages.CIA_CREST(query = your.query,
 ```
 
 The return `parse.table` includes 4 columns:
+
+<img src="img/0.png" />    
 
 1. `title` : titles of documents.
 

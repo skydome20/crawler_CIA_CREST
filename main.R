@@ -1,7 +1,7 @@
 source("crawler_CIA_CREST.R")
 
 ##################################################################################
-
+# Example for 'Kennedy'
 # Download CIA files of 'Kennedy' in top 10 pages  
 
 #=== 1. Give a query to get basic information ===#
@@ -20,7 +20,7 @@ reference.table = download.doc.CIA_CREST(parse.table)
 
 
 ##################################################################################
-
+# Example for 'secret letter'
 # Download CIA files of 'secret letter' in 0,2,4 pages  
 # (note that 0 is the 1st page on the web)
 
@@ -41,7 +41,7 @@ reference.table = download.doc.CIA_CREST(parse.table)
 
 
 ##################################################################################
-
+# Example for 'Obama'
 # Download CIA files of 'Obama' in 0~1 pages  
 # (note that 0 is the 1st page on the web)
 #=== 1. Give a query to get basic information ===#
@@ -56,7 +56,7 @@ parse.table = parsing.pages.CIA_CREST(your.query, page.nums)
 reference.table = download.doc.CIA_CREST(parse.table)
 
 ##################################################################################
-
+# Example for 'UFO'
 # Download the top 10 CIA files of 'UFO' in 0 pages 
 # (note that 0 is the 1st page on the web)
 
